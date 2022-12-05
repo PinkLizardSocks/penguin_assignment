@@ -25,9 +25,8 @@ check_expected_frequencies <- function(data){
     }
   }
   
-  expected_proportions
-  
   expected_frequencies <- expected_proportions * total
   
-  expected_frequencies
+  return(expected_frequencies)
+  
 }
