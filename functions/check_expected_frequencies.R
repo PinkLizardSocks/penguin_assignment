@@ -28,3 +28,4 @@ check_expected_frequencies <- function(data){
   expected_frequencies <- expected_proportions * total
   
   return(expected_frequencies)
+}
