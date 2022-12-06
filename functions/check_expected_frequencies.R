@@ -1,6 +1,6 @@
 # Check expected frequencies
 
-# Check what are the expected frequencies of the data for the chi squared test 
+# Check the expected frequencies of the data for the chi squared test 
 
 check_expected_frequencies <- function(data){
   
@@ -28,5 +28,3 @@ check_expected_frequencies <- function(data){
   expected_frequencies <- expected_proportions * total
   
   return(expected_frequencies)
-  
-}
