@@ -48,6 +48,10 @@ penguins_subset <- subsetting(penguins_clean)
 
 chisq.test(penguins_subset$species, penguins_subset$island)
 
+# The results are a X-squared value of 299.55 with 4 df and a p value < 2.2e-16
+# This strongly indicates that island and species are not independent 
+# The proportions of penguins on each island are significantly different 
+
 # Check the assumptions of the chi squared test by observing the expected frequencies
 
 source('functions/check_expected_frequencies.R')
@@ -55,6 +59,9 @@ source('functions/check_expected_frequencies.R')
 expected_frequencies_table <- check_expected_frequencies(penguins_subset)
 
 write.table(expected_frequencies_table, "figures/expected_frequency_table.csv")
+
+# The resulting table found in the figures file shows that each expected 
+# frequency is greater than 5 so this assumption is not violated
 
 # Make a plot of the proportions of species on each island as a bar plot
 
