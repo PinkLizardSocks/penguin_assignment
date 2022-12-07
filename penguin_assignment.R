@@ -7,12 +7,11 @@
 ##
 ## Date Created: 2022-12-05
 ##
-## Notes:
+## Notes: 
+##        
 ##   
 ##
 ## ---------------------------
-
-# SET WORKING DIRECTORY TO SOURCE FILE LOCATION
 
 # Load the packages
 
@@ -23,6 +22,11 @@ library(dplyr)
 library(tidyr)
 library(ragg)
 library(svglite)
+library(rstudioapi)
+
+# Set working directory to source file location 
+
+setwd(dirname(getActiveDocumentContext()$path))  
 
 # Load the raw data 
 
@@ -74,3 +78,4 @@ penguins_bar_chart <- plot_bar_chart(penguins_subset)
 source('functions/save_plot.R')
 
 save_plot(penguins_subset, "figures/figure_01.png", size = 15, res = 600, scaling = 1)
+
