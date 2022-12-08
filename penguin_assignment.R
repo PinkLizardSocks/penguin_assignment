@@ -12,8 +12,6 @@
 ##
 ## ---------------------------
 
-# SET WORKING DIRECTORY TO SOURCE FILE LOCATION
-
 # Load the packages
 
 library(palmerpenguins)
@@ -23,6 +21,11 @@ library(dplyr)
 library(tidyr)
 library(ragg)
 library(svglite)
+library(rstudioapi)
+
+# Set working directory to source file location 
+
+setwd(dirname(getActiveDocumentContext()$path))  
 
 # Load the raw data 
 
