@@ -62,7 +62,7 @@ source('functions/check_expected_frequencies.R')
 
 expected_frequencies_table <- check_expected_frequencies(penguins_subset)
 
-write.table(expected_frequencies_table, "figures/expected_frequency_table.csv")
+write.csv(expected_frequencies_table, "figures/expected_frequency_table.csv")
 
 # The resulting table found in the figures file shows that each expected 
 # frequency is greater than 5 so this assumption is not violated. 
